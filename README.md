@@ -178,7 +178,7 @@
 
 * **/lib** --> Sistem kütüphaneleri (Kütüphane ve kernel (çekirdek) modülleri dosyaları buradadır.)
 
-* **/media**	 Kaldırılabilir donanımlar (Flash bellek, USB aygıtları, CD-ROM gibi kaldırılabilir donanımların bilgi dosyaları buradadır.)
+* **/media** --> Kaldırılabilir donanımlar (Flash bellek, USB aygıtları, CD-ROM gibi kaldırılabilir donanımların bilgi dosyaları buradadır.)
 
 ### Dosya Sistemi ve Dizin Yapısı Hakkında Unutulmaması Gerekenler
 
@@ -202,31 +202,31 @@
 
 * **Donanım, Çekirdek ve Kabuk’un İşbirliği…**
 
-* RunLevels (6) 		 Çalışmak istenen seviyenin devreye girmesini, yüklenmesini sağlar.
+* RunLevels (6) --> Çalışmak istenen seviyenin devreye girmesini, yüklenmesini sağlar.
 
-* init (5)	 Çekirdek, sağlıklı yüklendikten sonra, kendisinin başlangıç işlemi olan ‘init’ işlemini başlatır. Sistemin açıldığı çalışma seviyesinde (runlevels’da) tanımlı olan işlemleri başlatır.
+* init (5) --> Çekirdek, sağlıklı yüklendikten sonra, kendisinin başlangıç işlemi olan ‘init’ işlemini başlatır. Sistemin açıldığı çalışma seviyesinde (runlevels’da) tanımlı olan işlemleri başlatır.
 
-* Kernel (initrd) (4) 	 Initial RAM Disk adında bir imajdır. Çekirdek ve gerçek dosya sistemi yüklenmesi sırasında yardımcı olan, geçici bir dosyadır. Tüm dizinler, işletim sistemine burada bağlanır. İşletim sistemi başarılı şekilde yüklendiğinde işi biter.
+* Kernel (initrd) (4) --> Initial RAM Disk adında bir imajdır. Çekirdek ve gerçek dosya sistemi yüklenmesi sırasında yardımcı olan, geçici bir dosyadır. Tüm dizinler, işletim sistemine burada bağlanır. İşletim sistemi başarılı şekilde yüklendiğinde işi biter.
 
-* G.R.U.B. (3)	 Açılışta, işletim sistemi için seçim listesi (menüsü) sağlar. Seçilen işletim sistemine göre parametereler yüklenerek işletim sistemi açılışı başlar. Bulunabilmek için MBR bilgisine kendisini de eklemiştir.
+* G.R.U.B. (3) --> Açılışta, işletim sistemi için seçim listesi (menüsü) sağlar. Seçilen işletim sistemine göre parametereler yüklenerek işletim sistemi açılışı başlar. Bulunabilmek için MBR bilgisine kendisini de eklemiştir.
 
-* M.B.R. (2)	 BIOS’ta tanımlı ilk disk üzerinde işletim sistemi izi arar ve açar. Disklerin ilk sektöründeki 512 B’lık alandır. Diskin dosya sistemi ve  işletim sistemi hakkında bilgi verir. GRUB bilgisi de buradadır.
+* M.B.R. (2) --> BIOS’ta tanımlı ilk disk üzerinde işletim sistemi izi arar ve açar. Disklerin ilk sektöründeki 512 B’lık alandır. Diskin dosya sistemi ve  işletim sistemi hakkında bilgi verir. GRUB bilgisi de buradadır.
 
-* P.O.S.T.	 (1)		 BIOS’tan okuduğu (öğrendiği) donanımlar üzerinde çalışırlık testi yapar. Başarılıysa üst etaba geçer.
+* P.O.S.T.	 (1) --> BIOS’tan okuduğu (öğrendiği) donanımlar üzerinde çalışırlık testi yapar. Başarılıysa üst etaba geçer.
 
-    - Run Level 0	 HALT (Sistem çalışmaz durumdadır. ‘Kapalı’ demek değildir. Kesintiyi bekliyor.) 
+    - Run Level 0 --> HALT (Sistem çalışmaz durumdadır. ‘Kapalı’ demek değildir. Kesintiyi bekliyor.) 
 
-    - Run Level 1 	 Tek kullanıcılı konsol modu. Ağ erişimi yoktur. 
+    - Run Level 1 --> Tek kullanıcılı konsol modu. Ağ erişimi yoktur. 
 
-    - Run Level 2 	 Çok kullanıcılı konsol (terminal) modu. Ağ erişimi yoktur. 
+    - Run Level 2 --> Çok kullanıcılı konsol (terminal) modu. Ağ erişimi yoktur. 
 
-    - Run Level 3 	 Çok kullanıcılı konsol (terminal) modu. Ağ erişimi vardır. 
+    - Run Level 3 --> Çok kullanıcılı konsol (terminal) modu. Ağ erişimi vardır. 
 
-    - Run Level 4 	 Boştur. Kişisel olarak kurgulanabilir. 
+    - Run Level 4 --> Boştur. Kişisel olarak kurgulanabilir. 
 
-    - Run Level 5 	 Çok kullanıcılı grafik arayüz (GUI) modu. Sıklıkla buradayızdır. 
+    - Run Level 5 --> Çok kullanıcılı grafik arayüz (GUI) modu. Sıklıkla buradayızdır. 
 
-    - Run Level 6 	 Yeniden başlatma seviyesi.
+    - Run Level 6 --> Yeniden başlatma seviyesi.
 
 * /etc/rc{levelno}.d dizini altında yer alırlar.  		
 
